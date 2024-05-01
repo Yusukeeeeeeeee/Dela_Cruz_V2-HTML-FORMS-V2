@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lengget's Kakanin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Your+Font+Name">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/Main Logo.png" alt="Your Logo">
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Order Now!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="slide">
+                    <div class="text-section">
+                        <div class="text-container">
+                            <h2 class="text-with-outline">Welcome to Lengget's Kakanin</h2>
+                            <p class="text-with-outline">Discover our delicious home made Filipino kakanin made with love and tradition.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide"><img class="highlight-img" src="img/Puto2.png"><div class="highlight-desc"><h4>Puto</h4><p>₱7</p></div></div>
+                <div class="slide"><img class="highlight-img" src="img/Suman antala2.png"><div class="highlight-desc"><h4>Suman Antala</h4><p>₱10</p></div></div>
+                <div class="slide"><img class="highlight-img" src="img/Suman Latik2.png"><div class="highlight-desc"><h4>Suman Latik</h4><p>₱15</p></div></div>
+                <div class="slide"><img class="highlight-img" src="img/Suman Yakap2.jpg"><div class="highlight-desc"><h4>Sumang yakap</h4><p>₱30</p></div></div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </section>
+    <div id="orderPopup" class="order-popup">
+        <section class="order-form">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <label for="productNameDropdown">Product:</label>
+                <div class="custom-select">
+                    <select id="productNameDropdown" name="productName" required>
+                        <option value="">Select a product</option>
+                        <option value="Puto">Puto</option>
+                        <option value="Suman Antala">Suman Antala</option>
+                        <option value="Suman Latik">Suman Latik</option>
+                        <option value="Sumang yakap">Sumang Yakap</option>
+                        <option value="Kutsinta">Kutsinta</option>
+                        <option value="Sapin-Sapin">Sapin-Sapin</option>
+                    </select>
+                </div>
+                <label for="quantity">Quantity:</label>
+                <div class="custom-select-quantity">
+                    <select id="quantity" name="quantity" required>
+                        <option value="">Select quantity</option>
+                        <option value="1">piece</option>
+                        <option value="1">wrap</option>
+                    </select>
+                </div>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="paymentMethod">Payment Method:</label>
+                <div class="custom-select-payment">
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">Select payment method</option>
+                        <option value="cash">Cash</option>
+                        <option value="gcash">Gcash</option>
+                    </select>
+                </div>
+                <label for="fullName">Your Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            
+                <button type="submit">Submit Order</button>
+
+                <button id="closeOrderPopupBtn" class="close-popup-btn">&times;</button>
+         </form>
+      </section>
+    </div>
+        </section>
+        <section class="product-grid">
+            <section class="product-grid">
+                <a href="#" class="product" onclick="openOrderPopup('Puto')">
+                    <img src="img/Puto.jpg" alt="Product 1">
+                    <h3>Puto</h3>
+                    <p>₱7</p>
+                    <p>Puto pandan is a delightful Filipino steamed rice cake infused with pandan flavor.</p>
+                </a>
+                <a href="#" class="product" onclick="openOrderPopup('Suman Antala')">
+                    <img src="img/Suman Antala.png" alt="Product 2">
+                    <h3>Suman antala</h3>
+                    <p>₱10</p>
+                    <p>Suman antala is a type of suman, which is a traditional Filipino rice cake typically made from glutinous rice wrapped in banana leaves and then steamed.</p>
+                </a>
+                </a>
+                <a href="#" class="product" onclick="openOrderPopup('Suman Latik')">
+                    <img src="img/Suman Latik.png" alt="Product 3">
+                    <h3>Suman latik</h3>
+                    <p>₱15</p>
+                    <p>Suman Latik is a Filipino dessert that combines the soft, sticky texture of suman (steamed glutinous rice cake) with the rich sweetness of latik, a coconut caramel sauce.</p>
+                </a>
+                <a href="#" class="product" onclick="openOrderPopup('Sumang Yakap')">
+                    <img src="img/Suman Yakap.jpg" alt="Product 4">
+                    <h3>Sumang yakap</h3>
+                    <p>₱30</p>
+                    <p>Suman Yakap is a sweet delicacy consists of suman, a traditional Filipino rice cake made from glutinous rice, coconut milk, and sugar, wrapped in banana leaves to form a cylindrical shape.</p>
+                </a>
+                <a href="#" class="product" onclick="openOrderPopup('Kutsinta')">
+                    <img src="img/Kutsinta.png" alt="Product 5">
+                    <h3>Kutsinta(Bilao)</h3>
+                    <p>₱400</p>
+                    <p>Kutsinta is a popular Filipino steamed rice cake known for its chewy texture and slightly sweet flavor. It is typically brown or reddish-orange in color and often served as a snack or dessert.</p>
+                </a>
+                <a href="#" class="product" onclick="openOrderPopup('Sapin-Sapin')">
+                    <img src="img/Sapinsapin.png" alt="Product 6">
+                    <h3>Sapin-Sapin(Bilao)</h3>
+                    <p>₱650</p>
+                    <p>Sapin-sapin is a colorful and visually appealing Filipino dessert that consists of layers of glutinous rice cake with vibrant colors and distinct flavors.</p>
+                </a>
+            </section>
+        </section>
+    </main>    
+
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#" id="openFeedbackModal">Feedback</a></li>
+            <li>
+                <a href="https://www.facebook.com/God.Yumiii" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
+    
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAboutModal()">&times;</span>
+            <h2>About Us</h2>
+            <p>This is some information about us.</p>
+        </div>
+    </div>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeFeedbackModal">&times;</span>
+            <h2>Submit Feedback</h2>
+            <input type="text" id="feedbackInput" placeholder="Enter your feedback">
+            <button id="submitFeedbackBtn">Submit</button>
+        </div>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>
